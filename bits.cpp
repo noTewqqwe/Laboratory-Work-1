@@ -55,7 +55,6 @@ bool testBit(unsigned long long value, int n) {
 static void printIntegerBits(unsigned long long bits, int width, bool isSigned) {
     bool neg = isSigned && testBit(bits, width - 1);
     int start = isSigned ? 1 : 0;
-
     int first = -1;
     for (int i = start; i < width; i++) {
         if (testBit(bits, width - 1 - i) != neg) {
