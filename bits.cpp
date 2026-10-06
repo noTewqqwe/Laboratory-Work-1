@@ -94,6 +94,7 @@ void printUnsignedBits(unsigned int value, const string& name) {
 }
 
 static void printFloatingBits(unsigned long long bits, int width, int expBits, const string& expLabel, const string& mantLabel) {
+    int mantBits = width - 1 - expBits;
 
     cout << "  " << RED << "знак" << RESET << " | "
          << YELLOW << "порядок (" << expLabel << ")" << RESET << " | "
